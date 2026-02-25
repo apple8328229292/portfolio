@@ -1,73 +1,267 @@
-#home img{
-    width: 200px;
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('cloudbackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    background-color: rgba(30, 210, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;  /* Keeps brand left, links center, social right */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens if needed */
+}
+
+.nav-brand {
+    flex: 0 0 auto; /* Don't grow or shrink */
+}
+
+.nav-brand a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #001f3f;
+    text-decoration: none;
+}
+
+.nav-links {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+    gap: 2rem; /* Better spacing instead of fixed margins */
+}
+
+.nav-links a {
+    color: #001f3f;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.social-links {
+    flex: 0 0 auto;
+}
+
+.social-links a {
+    color: #001f3f;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.nav-brand a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #001f3f;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin: 0 1.5rem;
+    color: #001f3f;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.social-links a {
+    color: #001f3f;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.profile-img {
+    width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 4px solid rgb(0, 47, 255);
+    object-fit: cover;
+    border: 6px solid #00d4ff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
 }
 
-#home{
-    font-size: 30px;
-    font-weight: bolder;
-    font-style: oblique;
-    font-display: auto;
-    font-variant: small-caps;
-}
-    
-nav{
-     background-color:rgb(30, 210, 255);
-     text-decoration: none;
-     display: flex;
-     justify-content: space-between;
-     height: 100px;
-
+.hero h1 {
+    font-size: 3.5rem;
+    color: #001f3f;
+    margin-bottom: 10px;
 }
 
-
-
-body{
-    background: url("cloudbackground.jpg") no-repeat center/cover;
+.hero h3 {
+    font-size: 1.8rem;
+    color: #00aaff;
+    font-weight: 400;
 }
 
-body{
-    color:darkslateblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+/* About Section */
+.about {
+    padding: 100px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
 
-footer{
-    background-color: rgb(0, 217, 255);
-    padding: 9px;
-    font-size: 18px;
+.about h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #001f3f;
 }
-nav a{
-    color:darkslateblue;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: lighter;
-    font-style: initial;
-    font-size:55px;
-    text-decoration:none;
-    word-spacing: normal;
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #444;
 }
-.project-card a{
+
+/* Projects Section */
+.projects {
+    padding: 100px 0;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: #001f3f;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content h3 a {
+    color: #00aaff;
     text-decoration: none;
-    color: rgb(30, 210, 255);
-    font-weight: bolder;
-    font-family: fantasy;
-    font-size: xx-large;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5cm;
-    justify-content: space-between;
-    background-color: #1a98ff;
+.card-content h3 a:hover {
+    color: #001f3f;
 }
-.project-card{
-    display: block;
-    border: 5px, solid, #1a98ff;
-    box-shadow:#000000;
-    width: 500px;
+
+.card-content p {
+    color: #555;
+    font-size: 1rem;
 }
-#Snake{
-    width:430px;
+
+/* Footer */
+.footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* You can add a mobile menu later */
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+    }
 }

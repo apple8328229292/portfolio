@@ -3,58 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiden Kwok</title>
-    <link rel ="stylesheet" href="style.css">
+    <title>Aiden Kwok | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <body>
-    <nav>
-        <div>
-            <a href ="#home">home</a>
-            <a href ="#about">about</a>
-            <a href ="#projects">projects</a>
-        </div> 
-        <div>
-            <a href ="https://facebook.com"target = "_blank"><i class="fab fa-facebook"></i></a>
-            <a href ="https://instagram.com"target = "_blank"><i class="fa-brands fa-instagram"></i></a>
-        </div>     
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="#home">Aiden Kwok</a>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </nav>
 
-    <section id= "home">
-        <img src="apple.jpg" alt="Me and my dad">
-        <h1>Aiden Kwok</h1>
-        <h3>Student</h3>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="apple.jpg" alt="Aiden Kwok" class="profile-img">
+            <h1>Aiden Kwok</h1>
+            <h3>Student & Game Developer</h3>
+        </div>
     </section>
-    <sections id="about">
-        <h2>About me</h2>
-        <p>Aiden is cool and plays Roblox.</p>
-    </sections>
-    
-    <sections id="projects" class="gallery">
-        <div class = "project-card">
-            <a href ="https://happy818.itch.io/flappy-bird" target="_blank"><h3>Flappy bird</h3></a>
-            <h2>Flappy Bird</h2>
-            <p>I created this flappy bird game to try and replicate the original one.</p>
-            <img src="images-removebg-preview.png">
-        </div>
-        <div class = "project-card">
-            <a href ="https://happy818.itch.io/snake-game" target="_blank"><h3>Snake Game</h3></a>
-            <h2>Snake Game</h2>
-            <p>This is the original snake game in python!</p>
-            <img src="snake.png" id="Snake">
-        </div>
-        <div class = "project-card">
-            <a href ="https://happy818.itch.io/space-invader" target="_blank"><h3>Space Invader</h3></a>
-            <h2>Space Invader</h2>
-            <p>This is a game I made when I was a beginner in Python.Try it out!</p>
-            <img src="download.png">
-        </div>
 
-    </sections>
-    <footer>
-        <div>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm Aiden, a passionate student who loves coding and creating games. I enjoy working with Python, HTML, CSS, and JavaScript. When I'm not coding, you can find me playing Roblox or coming up with new project ideas!</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="gallery">
+                <div class="project-card">
+                    <img src="images-removebg-preview.png" alt="Flappy Bird">
+                    <div class="card-content">
+                        <h3><a href="https://happy818.itch.io/flappy-bird" target="_blank">Flappy Bird</a></h3>
+                        <p>A recreation of the classic Flappy Bird game.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="snake.png" alt="Snake Game">
+                    <div class="card-content">
+                        <h3><a href="https://happy818.itch.io/snake-game" target="_blank">Snake Game</a></h3>
+                        <p>The classic Snake game built in Python.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="download.png" alt="Space Invader">
+                    <div class="card-content">
+                        <h3><a href="https://happy818.itch.io/space-invader" target="_blank">Space Invader</a></h3>
+                        <p>A retro-style space shooter game.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="spring-matching-cards-laid-out.jpg" alt="Memory Game">
+                    <div class="card-content">
+                        <h3><a href="https://apple8328229292.github.io/Memory-gammessss/" target="_blank">Memory Game</a></h3>
+                        <p>A fun card-matching memory game in HTML/CSS/JS.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="hangman-drawing-on-chalkboard-260nw-300547691.webp" alt="Hangman">
+                    <div class="card-content">
+                        <h3><a href="https://apple8328229292.github.io/hangman/" target="_blank">Hangman</a></h3>
+                        <p>Classic word-guessing game built with JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="table.avif" alt="BMI Calculator">
+                    <div class="card-content">
+                        <h3><a href="https://apple8328229292.github.io/BMI-Calculator/" target="_blank">BMI Calculator</a></h3>
+                        <p>A simple and useful BMI calculator with CSS styling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
             <p>© 2025 Aiden Kwok. All rights reserved.</p>
-            <p>contact:<a href="Gmailto:aidenkwok2015@gmail.com">aiden.kwok2015@gmail.com</a></p>
+            <p>Contact: <a href="mailto:aidenkwok2015@gmail.com">aidenkwok2015@gmail.com</a></p>
         </div>
     </footer>
 </body>
